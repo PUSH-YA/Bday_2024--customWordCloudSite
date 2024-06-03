@@ -17,7 +17,7 @@ The project takes a message from the user, finds the closest resembling quote ba
 
 ## Unexpected Error
 
-The original plan was to use a sentence embedder to encode and decode, however, most decoder libraries are either predicting using the lines or not embedding it properly. I will have to get the ID of the embedding and just find the similar ID in txt file. (ducttape solution for now!)
+The original plan was to use a sentence embedder to encode and decode, however, most decoder libraries are either predicting using the lines or not embedding it properly. So, I changed the quotes to be stored in the ID's of the vectors and then use the ID of the closest matching vector as the quote.
 
 # Skills learnt
 

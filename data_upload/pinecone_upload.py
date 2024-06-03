@@ -13,6 +13,8 @@ import pandas as pd
 import numpy as np
 from pinecone import Pinecone, PodSpec;
 from sentence_transformers import SentenceTransformer
+import joblib
+from django.conf import settings;
 
 
 #%%
@@ -22,7 +24,7 @@ from sentence_transformers import SentenceTransformer
 with open('data.txt', 'r') as file:
     quotes = file.readlines()
     
-model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+model = model = joblib.load('model.pkl')
 
 #%%
 
@@ -53,8 +55,10 @@ index= pc.Index(index_name)
 #%%
     
 embeddings = model.encode(quotes)
-ids = [str(i) for i in range(embeddings.shape[0])]
+# ids = [str(i) for i in range(embeddings.shape[0])]
+ids = [quote for quote in quotes]
 vectors = [np.array(row) for row in embeddings]
 
 # data uploaded 
+# metadata = [{'quote': quote.strip()} for quote in quotes]
 print(index.upsert(vectors = zip(ids, vectors)))

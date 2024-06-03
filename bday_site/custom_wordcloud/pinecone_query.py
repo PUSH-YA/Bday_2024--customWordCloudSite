@@ -27,16 +27,18 @@ class PineconeQuery:
     def query(self):
         # using ID because original plan changed, can also use pinecone similarity to find the closest match
         self.vector = self.vector.tolist()
-        response  = self.index.query(vector=self.vector, top_k=1)['matches'][0]['id']
+        self.response  = self.index.query(vector=self.vector, top_k=1)['matches'][0]['id']
         self.score = self.index.query(vector=self.vector, top_k=1)['matches'][0]['score']
+    
 
-        text_file = os.path.join(settings.STATICFILES_DIRS[0], "data.txt")
-        with open(text_file, 'r') as file:
-            data = file.readlines()
-        self.match = data[int(response)]
+        # text_file = os.path.join(settings.STATICFILES_DIRS[0], "data.txt")
+        # with open(text_file, 'r') as file:
+        #     data = file.readlines()
+        # self.match = data[int(response)]
 
         if settings.DEBUG:
-            print(f'The query selected: {self.match}')
+            print(f'The query selected: {self.response}')
             print(f'similarity score is {self.score}')
             
-        return self.match, self.score
+        # return self.match, self.score
+        return self.response, self.score
