@@ -6,4 +6,3 @@ numpy==1.26.4
 Pillow==9.5.0
 Pillow==10.3.0
 pinecone==4.0.0
-sentence-transformers==2.7.0

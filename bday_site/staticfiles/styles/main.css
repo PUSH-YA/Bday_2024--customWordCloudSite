@@ -1,0 +1,98 @@
+
+
+/* ////////////////////// MAIN CUSTOMISATIONS ////////////////////// */
+:root {
+    --tag_pad: 5px;
+}
+
+body{
+    /* background-image: url('path/to/your/background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    position: relative; */
+    background-color: #1c1c1d;
+    color: #fff;
+    font-family: Cambria;
+    font-size: larger;
+}
+
+hr{background-color: #f0b9a5; height: 2px; border:0}
+a:link {color:#48cbf2}
+a:visited {color:#48cbf2}
+a:hover {color:#f0b9a5}
+
+/* ////////////////////// CUSTOM LOGO STUFF ////////////////////// */
+
+.logo-href {
+    text-decoration: none;
+    color: #f0b9a5; 
+}
+
+.logo-href:visited {
+    color: #f0b9a5; 
+}
+
+.logo-href:hover {
+    color: #48cbf2;
+    text-decoration: underline; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    max-width: 50px; 
+    margin-right: 10px; 
+    border-radius: 10px;
+}
+
+/* ////////////////////// CUSTOM TAGS ////////////////////// */
+.tags {
+    margin: var(--tag_pad);
+    padding: var(--tag_pad);
+    background: #48caf274;
+    border-radius: var(--tag_pad);
+    display: inline-block;
+}
+
+
+
+/* ////////////////////// CUSTOM BUTTONS ////////////////////// */
+.button-style {
+    background-color: #f0b9a5;
+    color: #1c1c1d;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-style:hover {
+    background-color: #c77d63;
+}
+
+.button-style:visited {
+    background-color: #f0b9a5;
+    color: #1c1c1d;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    background-color: #f0b9a5;
+    color: #1c1c1d;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #c77d63;
+}

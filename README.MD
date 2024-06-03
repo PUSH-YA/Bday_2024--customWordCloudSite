@@ -120,3 +120,9 @@ It uses the `CSRF` token to prevent *cross-site forgery* on the POST request. It
 2. Finds the most similar embedding using the Pinecone database
 3. De-embeds the retrieved vector into a string
 4. Uses the mask and the quote using the custom word cloud with the above process.
+
+# Extra notes
+
+- The build commands are present in [build.sh](bday_site/build.sh)
+- The libraries used are present in [requirements.txt](bday_site/requirements.txt) 
+  - they were collected with `pipreqs .` rather than `pip freeze > requirements.txt` to be specific to the project

@@ -1,0 +1,105 @@
+.matches{
+    text-align: center;
+    align-items: center;
+}
+
+.matches h2{
+    color:#EEE;
+}
+
+/* CUSTOM RADIO */
+.radio-inputs {
+    position: center;
+    display: inline-flex;
+    align-items:center;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #EEE;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 300px;
+    font-size: 14px;
+  }
+  
+  .radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .radio-inputs .radio input {
+    display: none;
+  }
+  
+  .radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: rgba(51, 65, 85, 1);
+    transition: all .15s ease-in-out;
+  }
+  
+  .radio-inputs .radio input:checked + .name {
+    background-color: #f0b9a5;
+    font-weight: 600;
+  }
+
+  /* CUSTOM SEARCH BUTTON */
+  .Explore-Button {
+    width: fit-content;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+  
+    background: linear-gradient(120deg, rgb(65, 43, 95), rgb(96, 51, 154));
+  }
+  .IconContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+  }
+  .telescope {
+    width: 100%;
+    height: auto;
+    transform-origin: center;
+    transition: all 1s;
+    transform: rotate(20deg);
+  }
+  .tripod {
+    width: 60%;
+    height: auto;
+  }
+  .text {
+    color: rgb(240, 240, 240);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .Explore-Button:hover .telescope {
+    transform: rotate(-35deg);
+  }
+
+  /* CUSTOM TEXT INPUT */
+.matches-textinput {
+  width: 200px;
+  padding: 10px;
+  outline: none;
+  display:inline;
+}
+
+.matches-textinput:focus {
+  border-color: #f0b9a5;
+  box-shadow: 0 0 5px #EEE(106, 142, 246, 0.5);
+}

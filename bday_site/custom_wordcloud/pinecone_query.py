@@ -1,5 +1,6 @@
 from pinecone import Pinecone;
-from sentence_transformers import SentenceTransformer;
+# version sentence-transformers==2.7.0
+# from sentence_transformers import SentenceTransformer;
 from django.conf import settings;
 import os;
 import joblib;
