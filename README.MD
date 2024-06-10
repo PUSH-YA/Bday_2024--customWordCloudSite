@@ -126,3 +126,12 @@ It uses the `CSRF` token to prevent *cross-site forgery* on the POST request. It
 - The build commands are present in [build.sh](bday_site/build.sh)
 - The libraries used are present in [requirements.txt](bday_site/requirements.txt) 
   - they were collected with `pipreqs .` rather than `pip freeze > requirements.txt` to be specific to the project
+- render build fields:
+```
+services:
+  - type: web
+    name: bday_site
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn bday_site.wsgi
+```

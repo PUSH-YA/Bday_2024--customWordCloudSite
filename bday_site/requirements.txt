@@ -5,3 +5,4 @@ mpld3==0.5.10
 numpy==1.26.4
 Pillow==10.3.0
 pinecone==4.0.0
+gunicorn==22.0.0
