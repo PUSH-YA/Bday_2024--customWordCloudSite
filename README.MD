@@ -135,3 +135,4 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn bday_site.wsgi
 ```
+- using `gunicorn` for the application server with the WSGI protocol
