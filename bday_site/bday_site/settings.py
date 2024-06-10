@@ -56,7 +56,7 @@ ROOT_URLCONF = "bday_site.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR/'wordmatch/templates/'],
+        "DIRS": [BASE_DIR/'wordmatch/templates/wordmatch'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
