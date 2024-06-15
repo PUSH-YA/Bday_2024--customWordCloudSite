@@ -15,8 +15,8 @@ source bday/bin/activate
 # Modify this line as needed for your package manager (pip, poetry, etc.)
 pip install -r requirements.txt
 
-# Convert static asset files -> not needed if DEBUGGING = TRUE
-python manage.py collectstatic --no-input
+# Convert static asset files -> needed if DEBUGGING = False
+# python manage.py collectstatic --no-input
 
 # Apply any outstanding database migrations
 python manage.py migrate
