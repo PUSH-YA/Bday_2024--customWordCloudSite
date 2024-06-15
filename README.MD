@@ -15,6 +15,8 @@ The project takes a message from the user, finds the closest resembling quote ba
 </div>
 <br>
 
+> there is also a picture of hua hua (panda) in the site as a gift :)
+
 ## Unexpected Error
 
 The original plan was to use a sentence embedder to encode and decode, however, most decoder libraries are either predicting using the lines or not embedding it properly. So, I changed the quotes to be stored in the ID's of the vectors and then use the ID of the closest matching vector as the quote.
@@ -121,18 +123,20 @@ It uses the `CSRF` token to prevent *cross-site forgery* on the POST request. It
 3. De-embeds the retrieved vector into a string
 4. Uses the mask and the quote using the custom word cloud with the above process.
 
-# Extra notes
+# Hosting site
 
-- The build commands are present in [build.sh](bday_site/build.sh)
-- The libraries used are present in [requirements.txt](bday_site/requirements.txt) 
-  - they were collected with `pipreqs .` rather than `pip freeze > requirements.txt` to be specific to the project
-- render build fields:
-```
-services:
-  - type: web
-    name: bday_site
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn bday_site.wsgi
-```
-- using `gunicorn` for the application server with the WSGI protocol
+| Ubuntu | Amazon EC2 |
+| :-------: | :------: |
+| <img src="readme_img/ubuntu.png" width="30%"> |<img src="readme_img/ec2.png" width="20%"> |
+
+Due to the lack of free tiers, my most affordable and easy to use solution was `Amazon EC2`
+- I am running an `Ubuntu` VM on `t2.micro` instance
+- I have added another TCP/IP with CRID 0.0.0.0/0 and ::/0
+- just have to clone this repo, go into `bday_site` dir 
+- Then run the build commands that are present in [build.sh](bday_site/build.sh)
+- Using Elastic IP for a persistent IP address, the instance will run the server on: 
+  - `52.14.52.212:8000` -- running on port 8000
+
+- Thanks to the following video: [youtube link](https://www.youtube.com/watch?v=PzSUOyshA6k)
+
+
