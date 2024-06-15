@@ -149,6 +149,7 @@ git reset --hard origin/main
 cd bday_site
 python3 manage.py runserver 0.0.0.0:8000
 ```
+- for convenience, i have also made the [update.sh](bday_site/update.sh) script to run the update and start the server
 
 ## Needed to increase EBS storage / volume
 
