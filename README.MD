@@ -139,4 +139,7 @@ Due to the lack of free tiers, my most affordable and easy to use solution was `
 
 - Thanks to the following video: [youtube link](https://www.youtube.com/watch?v=PzSUOyshA6k)
 
+## Increasing volume
 
+Thanks to `sentence-transformers` library, I will need more than 8GB free tier EBS storage and thus will add more storage according to the following [video](https://www.youtube.com/watch?v=XqOoNMLlKus)
+- It should be around $70 per 12 months or ~ $6 per month
