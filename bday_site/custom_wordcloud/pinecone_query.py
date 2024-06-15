@@ -1,6 +1,6 @@
 from pinecone import Pinecone;
 # version sentence-transformers==2.7.0
-# from sentence_transformers import SentenceTransformer;
+from sentence_transformers import SentenceTransformer;
 from django.conf import settings;
 import os;
 import joblib;
@@ -10,9 +10,9 @@ class PineconeQuery:
     def __init__(self, text):
         self.text = text
         
-        # self.model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
-        model_path = os.path.join(settings.STATICFILES_DIRS[0], "model.pkl")
-        self.model = model = joblib.load(model_path)
+        self.model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+        # model_path = os.path.join(settings.STATICFILES_DIRS[0], "model.pkl")
+        # self.model = model = joblib.load(model_path)
         
         # create pinecone vector database
         api = os.path.join(settings.STATICFILES_DIRS[0], "pinecone_api.txt")

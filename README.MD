@@ -133,7 +133,7 @@ Due to the lack of free tiers, my most affordable and easy to use solution was `
 - I am running an `Ubuntu` VM on `t2.micro` instance
 - I have added another TCP/IP with CRID 0.0.0.0/0 and ::/0
 - just have to clone this repo, go into `bday_site` dir 
-- Then run the build commands that are present in [build.sh](bday_site/build.sh)
+- Then run the build commands that are present in [build.sh](bday_site/build.sh).
 - Using Elastic IP for a persistent IP address, the instance will run the server on: 
   - `52.14.52.212:8000` -- running on port 8000
 
@@ -141,5 +141,6 @@ Due to the lack of free tiers, my most affordable and easy to use solution was `
 
 ## Increasing volume
 
-Thanks to `sentence-transformers` library, I will need more than 8GB free tier EBS storage and thus will add more storage according to the following [video](https://www.youtube.com/watch?v=XqOoNMLlKus)
+Thanks to `sentence-transformers` library, I will need more than 8GB free tier EBS storage so, modified to 30GB. 
 - It should be around $70 per 12 months or ~ $6 per month
+
