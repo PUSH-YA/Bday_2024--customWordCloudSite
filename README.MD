@@ -120,7 +120,7 @@ The site presents a form structure which takes the mask of the image and the tex
 It uses the `CSRF` token to prevent *cross-site forgery* on the POST request. It also ensures that an authenticated user is logged in. Then, it performs the following steps:
 1. It embeds the query using  
 2. Finds the most similar embedding using the Pinecone database
-3. De-embeds the retrieved vector into a string
+3. Takes the de-embedded sentence associated with the embedded vector
 4. Uses the mask and the quote using the custom word cloud with the above process.
 
 # Hosting the site
