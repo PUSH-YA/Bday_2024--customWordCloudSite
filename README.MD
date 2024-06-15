@@ -123,7 +123,7 @@ It uses the `CSRF` token to prevent *cross-site forgery* on the POST request. It
 3. De-embeds the retrieved vector into a string
 4. Uses the mask and the quote using the custom word cloud with the above process.
 
-# Hosting site
+# Hosting the site
 
 | Ubuntu | Amazon EC2 |
 | :-------: | :------: |
@@ -139,12 +139,23 @@ Due to the lack of free tiers, my most affordable and easy to use solution was `
 
 - Thanks to the following video: [youtube link](https://www.youtube.com/watch?v=PzSUOyshA6k)
 
-## Increasing volume
+## To run the modified site with a saved instance 
+- open the connection, launch the instance
+```bash
+source bday/bin/activate
+cd Bday_2024--customWordCloudSite
+git fetch origin
+git reset --hard origin/main
+cd bday_site
+python3 manage.py runserver 0.0.0.0:8000
+```
+
+## Needed to increase EBS storage / volume
 
 - The local saved model deprecated so shifted to using `paraphrase-MiniLM-L6-v2` from the library to embed the sentence
   - means I need to use the `sentence-transformers` library and all its dependencies
   - I will still keep the local model (as a souvenir)
 - Thanks to `sentence-transformers` library, I will need more than 8GB free tier EBS storage so, modified to 30GB. 
-- It should be around $70 per 12 months or ~ $6 per month
+- It should be around ~  $\$70$ per 12 months or $\approx \$ 6$ per month
 
 
