@@ -141,6 +141,10 @@ Due to the lack of free tiers, my most affordable and easy to use solution was `
 
 ## Increasing volume
 
-Thanks to `sentence-transformers` library, I will need more than 8GB free tier EBS storage so, modified to 30GB. 
+- The local saved model deprecated so shifted to using `paraphrase-MiniLM-L6-v2` from the library to embed the sentence
+  - means I need to use the `sentence-transformers` library and all its dependencies
+  - I will still keep the local model (as a souvenir)
+- Thanks to `sentence-transformers` library, I will need more than 8GB free tier EBS storage so, modified to 30GB. 
 - It should be around $70 per 12 months or ~ $6 per month
+
 
