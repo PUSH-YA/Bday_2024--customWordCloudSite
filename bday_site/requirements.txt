@@ -1,4 +1,4 @@
-Django==5.0.4
+Django==5.0.7
 joblib==1.4.0
 matplotlib==3.8.4
 mpld3==0.5.10
