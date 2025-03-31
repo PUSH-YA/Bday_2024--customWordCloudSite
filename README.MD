@@ -1,3 +1,5 @@
+> Disclaimer: EC2 instance has been terminated for now [31-March-2025]
+
 # Inspiration
 
 The main inspiration for this project was to integrate the different applied data science and web development technologies I had learnt to make a creative gift for someone special to me. <3
